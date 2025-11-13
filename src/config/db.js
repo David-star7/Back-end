@@ -1,4 +1,13 @@
-const connectDB = async () => {
-    console.log ("Simulación: conexión a base de datos"); //Aun sin configurar
-};
-export default connectDB;
+import mongoose from "mongoose";
+
+const MONGO_URI = "mongodb+srv://jacobogarcesoquendo:aFJzVMGN3o7fA38A@cluster0.mqwbn.mongodb.net/DavidChontal";
+
+export const connectDB = async () => {
+    try {
+        await mongoose.connect(MONGO_URI);
+        console.log("Conectado a MongoDB");
+    } catch (error) {
+        console.error("Error al conectar a MongoDB:", error.message);
+        process.exit(1);
+    }
+}

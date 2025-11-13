@@ -3,7 +3,7 @@ import cors from "cors";
 import morgan from "morgan";
 import dotenv from "dotenv";
 
-import  connectDB  from "./config/db.js";
+import  {connectDB}  from "./config/db.js";
 import gameRoutes from "./routes/gameRoutes.js";
 import reviewRoutes from "./routes/reviewRoutes.js";
 import  {errorHandler}  from "./middlewares/errorHandler.js";
