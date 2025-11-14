@@ -1,7 +1,20 @@
-import express from "express";
-const router = express.Router();
+import { Router } from "express";
+import {
+  getGames,
+  getGame,
+  createGame,
+  updateGame,
+  deleteGame
+} from "../controllers/gameController.js";
 
-router.get("/", (req, res) => {
-    res.send("Ruta de juegos funcionando");
-});
+const router = Router();
+
+router.get("/", getGames);
+router.get("/:id", getGame);
+router.post("/", createGame);
+router.put("/:id", updateGame);
+router.delete("/:id", deleteGame);
+
+console.log("Rutas de juegos cargadas")
+
 export default router;
