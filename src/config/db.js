@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const MONGO_URI = "mongodb+srv://jacobogarcesoquendo:aFJzVMGN3o7fA38A@cluster0.mqwbn.mongodb.net/JuanChontal";
+const MONGO_URI = "mongodb+srv://participantesjovenesenaccion_db_user:JgR083FOuB6tujW5@proyecto1.ytqgp4m.mongodb.net/?appName=DavidChontal";
 
 export const connectDB = async () => {
     try {
@@ -11,5 +11,6 @@ export const connectDB = async () => {
         process.exit(1);
     }
 }
+
 
 export default connectDB;
