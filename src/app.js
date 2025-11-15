@@ -20,8 +20,8 @@ app.use(express.json());
 app.get("/", (req, res) => res.send("Bienvenido a la API de GameTracker"));
 
 
-app.use("/api/juegos", gameRoutes);
-app.use("/api/reseñas", reviewRoutes);
+app.use("/api/games", gameRoutes);
+app.use("/api/reviews", reviewRoutes);
 
 app.use(errorHandler);
 

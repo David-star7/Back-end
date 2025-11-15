@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import app from "./app.js";
 
-dotenv.config();  //carga variables del entorno (.env)
+dotenv.config();  
 
 const PORT = process.env.PORT || 3000;
 
