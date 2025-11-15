@@ -1,5 +1,5 @@
 import Game from "../models/game.js";    
-export const getAllGames = async () => await Game.find({ completado: true });
+export const getAllGames = async () => await Game.find();
 
 export const getGameById = async (id) => await Game.findById(id);
 
